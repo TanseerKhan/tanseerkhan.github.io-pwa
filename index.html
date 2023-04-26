@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Simple Webpage</title>
+    <link rel="manifest" href="manifest.json">
+
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			background-color: #f2f2f2;
+			padding: 20px;
+		}
+		
+		h1 {
+			color: #333;
+			text-align: center;
+		}
+		
+		p {
+			color: #666;
+			line-height: 1.5;
+		}
+	</style>
+</head>
+<body>
+	<h1>Welcome to my webpage</h1>
+	<p>This is a simple webpage created using HTML and CSS in the same file. Here are some things you can do:</p>
+	
+	<ul>
+		<li>Learn HTML and CSS</li>
+		<li>Create your own webpage</li>
+		<li>Share your webpage with others</li>
+	</ul>
+	
+	<p>So what are you waiting for? Get started today!</p>
+</body>
+<script src="script.js"></script>
+<script>
+	if ('serviceWorker' in navigator) {
+	  window.addEventListener('load', function() {
+		navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
+		  console.log('ServiceWorker registration successful with scope: ', registration.scope);
+		}, function(err) {
+		  console.log('ServiceWorker registration failed: ', err);
+		});
+	  });
+	}
+	</script>
+</html>
